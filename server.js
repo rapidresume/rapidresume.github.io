@@ -13,7 +13,7 @@ app.post('/create-checkout-session', async (req, res) => {
           product_data: {
             name: 'Professional Resume Service',
           },
-          unit_amount: 2500, // $25.00
+          unit_amount: 1500, // $25.00
         },
         quantity: 1,
       },
