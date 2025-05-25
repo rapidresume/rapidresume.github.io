@@ -39,7 +39,17 @@
                     </div>
                     <div class="row gx-5 justify-content-center">
                         
-                        
+                        <button id="payBtn">Pay $15</button>
+
+                        <script>
+                        document.getElementById('payBtn').addEventListener('click', async () => {
+                            const response = await fetch('/create-checkout-session', {
+                                method: 'POST',
+                            });
+                            const data = await response.json();
+                            window.location.href = data.url; // Redirect to Stripe Checkout
+                            });
+                        </script>
                       
                     </div>
                 </div>
