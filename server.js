@@ -1,7 +1,7 @@
 // server.js
 const express = require('express');
 const app = express();
-const stripe = require('stripe')('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');
+const stripe = require('stripe')('pay_api_key');
 
 app.post('/create-checkout-session', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
